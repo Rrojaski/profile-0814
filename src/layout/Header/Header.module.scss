@@ -1,0 +1,12 @@
+@import "../../variables.scss";
+
+
+.header {
+    box-sizing: border-box;
+    position: absolute;
+    padding: 20px;
+    width: 100%;
+
+
+    z-index: 1;
+}

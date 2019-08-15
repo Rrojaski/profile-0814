@@ -1,0 +1,71 @@
+@import "../../variables.scss";
+
+.button {
+  position: relative;
+  white-space: nowrap;
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 50px;
+  border: none;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.2s;
+
+  // ANIMATION
+  animation: moveInBottom 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba($black, 0.2);
+    cursor: pointer;
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+}
+.primary {
+  background-color: $white;
+  color: $grey;
+
+  &::after {
+    background-color: $white;
+  }
+}
+.secondary {
+  background-color: $secondary-color;
+  color: $white;
+
+  &::after {
+    background-color: $secondary-color;
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
