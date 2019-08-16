@@ -7,7 +7,7 @@ import styles from "./Image.module.scss";
 const Image = props => {
   return (
     <React.Fragment>
-      <img className={`${styles.logo}`} src={props.image} />
+      <img className={`${styles[props.name]}`} src={props.src} />
     </React.Fragment>
   );
 };

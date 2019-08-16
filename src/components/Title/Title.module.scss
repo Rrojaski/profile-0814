@@ -1,0 +1,53 @@
+@import "../../variables.scss";
+
+.title {
+  font-weight: 700;
+
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+.large {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  color: $white;
+  animation: toRight 1s ease;
+  letter-spacing: 0.5rem;
+}
+
+.medium {
+  color: $secondary-color;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.small {
+  letter-spacing: 0.5rem;
+  font-size: 1.5rem;
+  margin-bottom: 60px;
+  color: $white;
+  animation: toLeft 1s ease;
+}
+
+@keyframes toRight {
+  0% {
+    transform: translateX(-20px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes toLeft {
+  0% {
+    transform: translateX(20px);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
